@@ -1,0 +1,12 @@
+<launch>
+  <arg name = "port" default = "/dev/ttyUSB0" />
+  <node name = "sensor_node" pkg = "gps_driver" type = "driver.py" output="screen" args="$(arg port)"/> 
+
+  <!-- <arg name = "record_bag" default = "false" />
+  <param name="port" value="$(arg port)" />
+  <node pkg = "rosbag" type = "record" name = "rosbag_record_gps_data" 
+  		args = "record $(find gps_driver)/data/GPS.bag -a" 
+  		if = "$(arg record_bag)"/> -->
+  
+</launch>
+

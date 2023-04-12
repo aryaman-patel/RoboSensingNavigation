@@ -1,0 +1,4 @@
+<launch>
+  <arg name = "~port" default = "/dev/ttyACM0" />
+  <node name = "IMU_node" pkg = "imu_driver" type = "driver.py" output="screen" args="$(arg ~port)"/> 
+</launch>
